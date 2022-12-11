@@ -1,0 +1,38 @@
+{
+  "name": "mars-rover-positioner",
+  "version": "1.0.0",
+  "description": "Move rover on Mars based on specific set of coordinates",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --recursive test",
+    "prettier": "prettier --write '**/*.{js.ts.json}'"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rtodea/mars-rover-positioner.git"
+  },
+  "keywords": [
+    "tdd",
+    "mocha",
+    "mars"
+  ],
+  "author": "Robert Todea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rtodea/mars-rover-positioner/issues"
+  },
+  "homepage": "https://github.com/rtodea/mars-rover-positioner#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "eslint": "^8.29.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-mocha": "^10.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "mocha": "^10.1.0",
+    "sinon": "^15.0.0",
+    "prettier": "^2.8.1"
+  }
+}
