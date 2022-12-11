@@ -20,9 +20,9 @@
   "author": "Robert Todea",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rtodea/mars-rover-positioner/issues"
+    "url": "https://github.com/rtodea/mars-rover-challenge/issues"
   },
-  "homepage": "https://github.com/rtodea/mars-rover-positioner#readme",
+  "homepage": "https://github.com/rtodea/mars-rover-challenge#readme",
   "devDependencies": {
     "chai": "^4.3.7",
     "eslint": "^8.29.0",
