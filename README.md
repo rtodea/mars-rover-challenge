@@ -86,20 +86,59 @@ Main specs to be inspected:
 1. [`positioner.spec.js`](./test/positioner.spec.js) --- main algorithm
 2. [`rover.spec.js`](./test/rover.spec.js) --- wrapper class
 
+Running all tests:
+
 ```bash
 npm test
 ```
 
-## Server
+Typical Output:
+
+```
+> mars-rover-positioner@1.0.0 test
+> mocha --recursive test
+
+
+  53 passing (33ms)
+```
+
+## Server (for playing via HTTP)
 
 We prepared a server to listen on `http://localhost:5000/api` to test out the solution.
 
 Start it:
+
 ```bash
 npm start
 ```
 
-Interact with it:
+Typical output:
+
+```
+> mars-rover-positioner@1.0.0 start
+> node server.js
+
+Server listening at: http://localhost:5000
+```
+
+Interact with it (from another terminal):
+
 ```bash
 curl -X POST http://localhost:5000/api -H 'Content-Type: application/json' -d '{"state": {"x": 0, "y": 0, "direction": "NORTH"}, "command": "FFF"}'
+```
+
+Typical output:
+
+```
+{"result":"(0, 3) NORTH"}
+```
+
+## Docker Image
+
+We prepared a sample Docker image to run the server in a container.
+Please run:
+
+```bash
+docker build -t mars-rover-positioner .
+docker run --name mars-rover-positioner -it --rm -p 5000:5000 mars-rover-positioner
 ```

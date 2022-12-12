@@ -240,11 +240,13 @@ describe("Positioner", () => {
         },
       ];
 
-      [...NorthDirectionMoves, ...EastDirectionMoves].forEach(({ before, after, direction, command }) => {
-        it(`should be moving ${direction} when ${command} from (${before.x} ${before.y}) to (${after.x} ${after.y})`, () => {
-          expect(move({ ...before, direction }, command)).eql({ ...after, direction });
-        });
-      });
+      [...NorthDirectionMoves, ...EastDirectionMoves, ...SouthDirectionMoves, ...WestDirectionMoves].forEach(
+        ({ before, after, direction, command }) => {
+          it(`should be moving ${direction} when ${command} from (${before.x} ${before.y}) to (${after.x} ${after.y})`, () => {
+            expect(move({ ...before, direction }, command)).eql({ ...after, direction });
+          });
+        }
+      );
     });
   });
 });
